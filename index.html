@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Creating 360</title>
+    <link rel="icon" type="image/png" href="images/logo.jpg" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)"/> -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
+    <header class="header">
+      <div class="container">
+        <figure class="logo">
+          <img src="images/logo.jpg" height="50" alt="" />
+        </figure>
+        <nav class="menu">
+          <ol>
+              <li>
+                <a class="link" href="#servicio">Servicios Digitales</a>
+              </li>
+              <li>
+                <a class="link" href="#trabajo">Trabajos</a>
+              </li>
+          </ol>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <h1>
+          Te <strong>asesoramos</strong> e <strong>Impulsamos</strong> <br/> tu marca en Medios Digitales <br> <strong>Síguenos y Contáctanos!</strong>
+        </h1>
+        <img class="hero-image" src="images/hero.jpg" width="500" height="300" alt="">
+      </div>
+    </section>
+    <section id="servicio" class="servicio">
+      <div class="container">
+        <h2>Servicios Digitales</h2>
+      <article class="contenedor1">
+        <div class="contenedor1-details">
+          <h3 class="contenedor1-title">Servicios Digitales</h3>
+          <p class="contenedor1-description">Recuerda que hoy en día los medios digitales tienen un gran impacto en las personas, tu como marca que tienes un producto o servicio que ofrecer, si no tienes presencia digital no existes para ellos. Es por eso que desde @creating360, te ofrecemos ayudarte a tener presencia digital e impulsar tu marca. ¡Síguenos y Contáctamos!</p>
+        </div>
+        <figure class="contenedor1-imageContainer">
+          <img class="contenedor1-image" width="500" src="images/post.jpg" alt="">
+        </figure>
+      </article>
+      </div>
+
+    </section>
+    <div class="container">
+      <h2 class="trabajo-list-title">Trabajos</h2>
+    </div>
+
+    <section id="trabajo" class="trabajo-list">
+      <div class="container">
+        <article class="trabajo">
+          <figure class="trabajo-imageContainer">
+            <img class="trabajos-image" src="images/2.jpg" width="500" />
+          </figure>
+          <div class="trabajo-detail">
+            <h3 class="trabajo-title">Diseño de Flyers</h3>
+            <p class="trabajo-description">Mestra de Nestros Trabajos. Diseño de Volantes.</p>
+            <a class="trabajo-url" href="" target="_blank">Ver</a>
+          </div>
+        </article>
+        <article class="trabajo">
+          <figure class="trabajo-imageContainer">
+            <img class="trabajos-image" src="images/3.jpg" width="500" />
+          </figure>
+          <div class="trabajo-detail">
+            <h3 class="trabajo-title">Diseño de Flyers</h3>
+            <p class="trabajo-description">Mestra de Nestros Trabajos. Diseño de Volantes.</p>
+            <a class="trabajo-url" href="" target="_blank">Ver</a>
+          </div>
+        </article>
+
+
+      </div>
+    </section>
+    <section id="contacto" class="contact">
+      <div class="container">
+        <div class="redes">
+          <a href="" class="redes-link twitter"></a>
+          <a href="" class="redes-link facebook"></a>
+          <a href="" class="redes-link github"></a>
+          <a href="" class="redes-link instagram"></a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // console.log('Hola mundo! es mi primera linea en JS');
+      const ipad = window.matchMedia('screen and (max-width: 767px)')
+      const menu = document.querySelector('.menu');
+      // console.log(menu);
+      const burgerButton = document.querySelector('#burger-menu');
+      // console.log(burgerButton);
+
+
+      ipad.addListener(validation)
+
+      function validation(event) {
+        if (event.matches) {
+          burgerButton.addEventListener('click', hideShow)
+        } else {
+          burgerButton.removeEventListener('click', hideShow)
+        }
+      }
+      validation(ipad);
+
+
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active');
+        } else {
+          menu.classList.add('is-active');
+        }
+      }
+    </script>
+  </body>
+</html>
